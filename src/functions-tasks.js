@@ -93,7 +93,7 @@ function getPowerFunction(exponent) {
 function getPolynom(...coeffs) {
   if (coeffs.length === 0) return null;
 
-  return function (x) {
+  return function polynomial(x) {
     return coeffs.reduce((sum, coeff, index) => {
       const power = coeffs.length - index - 1;
       return sum + coeff * x ** power;
